@@ -2,7 +2,7 @@
 
 By following steps we are going to create transit gateway to connect multiple vpc in same or multiple aws account without vpc peering.
 <br><br>
-<img src = "images/tg.png" width = 1500 height =1500>
+<img src = "images/tg.png" width = 1200 height =600>
 <br><br>
 
 
@@ -12,6 +12,6 @@ Step 1: Crate VPC Test-TG1, Test-TG12 and Test-TG3 with CIDER 10.1.1.0/24, 10.1.
 <br><br>
 <img src = "images/vpc.png" width = 1500 height =200>
 <br><br>
-Step2 2: 
+Step 2: 
 
 
