@@ -55,7 +55,7 @@ Step 8: Once all TG attachments created successfully check the TG Route table, I
 <img src = "images/TG-Route.png" width = 800 height =300>
 <br><br>
 Step 9: Now add Transit Gateway in each VPC route table against other VPC CIDR. 
-Like - 10.1.2.0/24 tgw-09c9f688c63bed7e3	and 10.1.3.0/24 tgw-09c9f688c63bed7e3 for VPC1 10.1.1.0/24
+<p>Like - 10.1.2.0/24 tgw-09c9f688c63bed7e3	and 10.1.3.0/24 tgw-09c9f688c63bed7e3 for VPC1 10.1.1.0/24</p>
 <br><br>
 Step 10: Now your EC2 is ready to check connectivity with other VPC EC2 instances. You can also check with ssh for the same you need to allow ssh port in Security Group.
 <br><br>
