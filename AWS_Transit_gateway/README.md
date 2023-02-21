@@ -17,9 +17,10 @@ Step 2: Now create a subnet for each VPCs, Create 1 public and 1 private subnet 
 Step 3: Now create an internet gateway for each VPC, To access ec2 instances now create an internet gateway and attach it to each VPC respectively.
 <br><br>
 Step 4: Now create 1 EC2 instance in each VPC to check connectivity between servers in different VPC. I have created 2 EC2 (VPC1 & VPC2) in public and 1 EC2 (VPC3) in private to check private subnet ec2 is also accessible from public subnet in different VPC. 
+<br><br>
 <img src = "images/vpc1-ec2.png" width = 1000 height =300><img src = "images/vpc2-ec2.png" width = 1000 height =300><img src = "images/vpc3-ec2.png" width = 1000 height =300>
 <br><br>
-Step 5: Now login to each servers and check connectivity by using ping command. I did from VPC1 EC2 and got following response.
+Step 5: Now login to each server and check connectivity by using the ping command. I did it from VPC1 EC2 and got the following response.
 <br><br>
 Note: You need to allow Custom-ICMP for ping in your security group to check ping response. To enable ICMP protocol (ping response) follow below steps.
 <p>Go to EC2 Dashboard and click "Running Instances"</p>
@@ -34,8 +35,36 @@ Note: You need to allow Custom-ICMP for ping in your security group to check pin
 <img src = "images/connectivity-check-before-tg.png" width = 800 height =300>
 
 <br><br>
-Now we need to create Transit Gateway and Transit Gateway Attachment to Solve this problum. Once we will create TG and TG attachment TG route table will create autometiclly with association and propagation for all 3 VPCs.   
+Now we need to create a Transit Gateway and Transit Gateway Attachment to Solve this problem. Once we will create TG and TG attachment TG route tables will be created automatically with association and propagation for all 3 VPCs.   
 <br><br>
-Step 6: To create TG go to VPC service at the 
+Step 6: To create TG go to VPC services, select Transit gateways and inside it create transit gateway. Now provide details as showing in below images.
+<br><br>
+<img src = "images/TG-step1.png" width = 800 height =300>
+<img src = "images/TG-step2.png" width = 800 height =300>
+<img src = "images/TG-step3.png" width = 800 height =300>
+<img src = "images/Test-TG.png" width = 800 height =50>
+<br><br>
+Step 7: Now create TG Attachment for each VPC as below. 
+<br><br>
+<img src = "images/TG-attach-1.png" width = 800 height =400>
+<img src = "images/TG-attach-2.png" width = 800 height =300>
+<img src = "images/TG-attach.png" width = 800 height =300>
+<br><br>
+Step 8: Once all TG attachments created successfully check the TG Route table, It will show all VPC in association and propagation.
+<br><br>
+<img src = "images/TG-Route.png" width = 800 height =300>
+Step 9: Now add Transit Gateway in each VPC route table against other VPC CIDR. 
+Like - 10.1.2.0/24 tgw-09c9f688c63bed7e3	and 10.1.3.0/24 tgw-09c9f688c63bed7e3 for VPC1 10.1.1.0/24
+<br><br>
+Step 10: Now your EC2 is ready to check connectivity with other VPC EC2 instances. You can also check with ssh for the same you need to allow ssh port in Security Group.
+<br><br>
+<p> From VPC1 ec2 to VPC2 and VPC3 ec2</p>
+<img src = "images/vpc1-ec2-connectivity-check.png" width = 800 height =400>
+<br><br>
+<p> From VPC2 ec2 to VPC1 and VPC3 ec2</p>
+<img src = "images/vpc2-ec2-connectivity-check.png" width = 800 height =400>
+<br><br>
+
+
 
 
