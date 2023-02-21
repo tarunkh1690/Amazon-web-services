@@ -53,6 +53,7 @@ Step 7: Now create TG Attachment for each VPC as below.
 Step 8: Once all TG attachments created successfully check the TG Route table, It will show all VPC in association and propagation.
 <br><br>
 <img src = "images/TG-Route.png" width = 800 height =300>
+<br><br>
 Step 9: Now add Transit Gateway in each VPC route table against other VPC CIDR. 
 Like - 10.1.2.0/24 tgw-09c9f688c63bed7e3	and 10.1.3.0/24 tgw-09c9f688c63bed7e3 for VPC1 10.1.1.0/24
 <br><br>
