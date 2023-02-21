@@ -6,5 +6,5 @@ To create TG, I will create 3 vpc and 3 ec2 instances 1 in each vpc to check.
 <br><br>
 Step 1: Crate VPC Test-TG1, Test-TG12 and Test-TG3 with CIDER 10.1.1.0/24, 10.1.2.0/24 and 10.1.3.0/24 respectively.
 <br><br>
-<img src = “AWS_Transit_gateway/images/vpc.png” width = 200_ height =100_>
-<br><br>
+<img src = "images/vpc.png" width = 200 height =100>
+
